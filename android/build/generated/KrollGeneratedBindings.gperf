@@ -1,0 +1,28 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name OpentokBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "com.tokbox.ti.opentok.SubscriberProxy.h"
+#include "com.tokbox.ti.opentok.OpentokViewProxy.h"
+#include "com.tokbox.ti.opentok.SessionProxy.h"
+#include "com.tokbox.ti.opentok.OpentokModule.h"
+#include "com.tokbox.ti.opentok.ConnectionProxy.h"
+#include "com.tokbox.ti.opentok.StreamProxy.h"
+#include "com.tokbox.ti.opentok.PublisherProxy.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+com.tokbox.ti.opentok.SubscriberProxy, ::com::tokbox::ti::opentok::SubscriberProxy::bindProxy, ::com::tokbox::ti::opentok::SubscriberProxy::dispose
+com.tokbox.ti.opentok.OpentokViewProxy, ::com::tokbox::ti::opentok::OpentokViewProxy::bindProxy, ::com::tokbox::ti::opentok::OpentokViewProxy::dispose
+com.tokbox.ti.opentok.SessionProxy, ::com::tokbox::ti::opentok::opentok::SessionProxy::bindProxy, ::com::tokbox::ti::opentok::opentok::SessionProxy::dispose
+com.tokbox.ti.opentok.OpentokModule, ::com::tokbox::ti::opentok::OpentokModule::bindProxy, ::com::tokbox::ti::opentok::OpentokModule::dispose
+com.tokbox.ti.opentok.ConnectionProxy, ::com::tokbox::ti::opentok::ConnectionProxy::bindProxy, ::com::tokbox::ti::opentok::ConnectionProxy::dispose
+com.tokbox.ti.opentok.StreamProxy, ::com::tokbox::ti::opentok::StreamProxy::bindProxy, ::com::tokbox::ti::opentok::StreamProxy::dispose
+com.tokbox.ti.opentok.PublisherProxy, ::com::tokbox::ti::opentok::PublisherProxy::bindProxy, ::com::tokbox::ti::opentok::PublisherProxy::dispose
+%%
